@@ -23,12 +23,13 @@ COPY sitio/index.html /usr/share/nginx/html/index.html
 
 ## 🔄 CI/CD - GitHub Actions
 
-El archivo `.github/workflows/main.yml` define el pipeline. Actualmente, se activa al hacer push a la rama main:
+El archivo `.github/workflows/main.yml` define el pipeline. Actualmente, se activa al hacer algun cambio en el index.html:
 
 ```main.yml
 on:
   push:
-    branches: [ "main" ]
+    paths:
+      - 'prueba3/sitio/index.html'
 ```
 
 ## 🛠️ Requisitos previos
