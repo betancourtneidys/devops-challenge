@@ -17,7 +17,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Build docker image
       run: | 
-        docker build --platform linux --tag neidys/prueba3:latest -f prueba3/Dockerfile .
+        docker build --platform linux --tag neidys/prueba3:latest -f prueba3/ .
     - name: Publish docker image
       run: |
         docker push neidys/prueba3:latest
